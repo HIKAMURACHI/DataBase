@@ -1,6 +1,6 @@
 # DataBase
-Use XAMPP and Heidi SQL for best work__
-Drop movie folder in xampp\htdocs__
-Extract movie.sql in Heidi SQL__
-in browser:__
-  site: localhost/movie__  
+Use XAMPP and Heidi SQL for best work<br />
+Drop movie folder in xampp\htdocs<br />
+Extract movie.sql in Heidi SQL<br />
+in browser:<br />
+  site: localhost/movie<br />
