@@ -1,12 +1,13 @@
 -- --------------------------------------------------------
 -- Хост:                         127.0.0.1
--- Версия сервера:               5.1.33-community - MySQL Community Server (GPL)
+-- Версия сервера:               10.1.31-MariaDB - mariadb.org binary distribution
 -- Операционная система:         Win32
--- HeidiSQL Версия:              9.4.0.5125
+-- HeidiSQL Версия:              9.5.0.5196
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
@@ -22,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `directorr` (
   PRIMARY KEY (`directors`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы movie.directorr: ~1 rows (приблизительно)
+-- Дамп данных таблицы movie.directorr: ~2 rows (приблизительно)
 /*!40000 ALTER TABLE `directorr` DISABLE KEYS */;
 INSERT INTO `directorr` (`directors`, `DateBirth`) VALUES
 	('George Lucas', '1944-05-14'),
@@ -35,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `genress` (
   PRIMARY KEY (`genres`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы movie.genress: ~2 rows (приблизительно)
+-- Дамп данных таблицы movie.genress: ~4 rows (приблизительно)
 /*!40000 ALTER TABLE `genress` DISABLE KEYS */;
 INSERT INTO `genress` (`genres`) VALUES
 	('Action'),
@@ -67,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `movies` (
   CONSTRAINT `FK_movies_studioo` FOREIGN KEY (`Studio`) REFERENCES `studioo` (`studios`) ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы movie.movies: ~1 rows (приблизительно)
+-- Дамп данных таблицы movie.movies: ~6 rows (приблизительно)
 /*!40000 ALTER TABLE `movies` DISABLE KEYS */;
 INSERT INTO `movies` (`ID`, `Name`, `Studio`, `Genre`, `Year`, `Director`, `Main_Role`, `ShortStroy`, `Result`, `Avaliable`) VALUES
 	(1, 'Star Wars I The Phantom menace', '20th Century Fox', 'SpaceOpera', 1999, 'George Lucas', 'Frank OZ', 'Begin long story ...', 1, 1),
@@ -75,31 +76,7 @@ INSERT INTO `movies` (`ID`, `Name`, `Studio`, `Genre`, `Year`, `Director`, `Main
 	(3, 'Star Wars Episode V The Empire Strikes Back', '20th Century Fox', 'SpaceOpera', 1980, 'George Lucas', 'Carrie Fisher', 'Empire Strikes again ...', 3, 0),
 	(4, 'Indiana Jones and the Last Crusade', '20th Century Fox', 'Adventure', 1989, 'George Lucas', 'Harison Ford', 'Indiana guy ...', 4, 1),
 	(5, 'Phineas and Ferb', 'Wallt Disney', 'Cartoon', 2007, 'George Lucas', 'Vinsent Martella', 'Duck with nose 007 ...', 5, 1),
-	(6, 'The Matrix', 'Warner Bros', 'Action', 1998, 'Lana Wachowski', 'Keanu Reeves', 'Real world ?', 6, 0),
-	(7, 'Star Wars I The Phantom menace', '20th Century Fox', 'SpaceOpera', 1999, 'George Lucas', 'Frank OZ', 'Begin long story ...', 1, 1),
-	(8, 'Star Wars Episode VI Return of the Jedi', '20th Century Fox', 'SpaceOpera', 1983, 'George Lucas', 'Harison Ford', 'Jedi return home ...', 2, 1),
-	(9, 'Star Wars Episode V The Empire Strikes Back', '20th Century Fox', 'SpaceOpera', 1980, 'George Lucas', 'Carrie Fisher', 'Empire Strikes again ...', 3, 0),
-	(10, 'Indiana Jones and the Last Crusade', '20th Century Fox', 'Adventure', 1989, 'George Lucas', 'Harison Ford', 'Indiana guy ...', 4, 1),
-	(11, 'Phineas and Ferb', 'Wallt Disney', 'Cartoon', 2007, 'George Lucas', 'Vinsent Martella', 'Duck with nose 007 ...', 5, 1),
-	(12, 'The Matrix', 'Warner Bros', 'Action', 1998, 'Lana Wachowski', 'Keanu Reeves', 'Real world ?', 6, 0),
-	(13, 'Star Wars I The Phantom menace', '20th Century Fox', 'SpaceOpera', 1999, 'George Lucas', 'Frank OZ', 'Begin long story ...', 1, 1),
-	(14, 'Star Wars Episode VI Return of the Jedi', '20th Century Fox', 'SpaceOpera', 1983, 'George Lucas', 'Harison Ford', 'Jedi return home ...', 2, 1),
-	(15, 'Star Wars Episode V The Empire Strikes Back', '20th Century Fox', 'SpaceOpera', 1980, 'George Lucas', 'Carrie Fisher', 'Empire Strikes again ...', 3, 0),
-	(16, 'Indiana Jones and the Last Crusade', '20th Century Fox', 'Adventure', 1989, 'George Lucas', 'Harison Ford', 'Indiana guy ...', 4, 1),
-	(17, 'Phineas and Ferb', 'Wallt Disney', 'Cartoon', 2007, 'George Lucas', 'Vinsent Martella', 'Duck with nose 007 ...', 5, 1),
-	(18, 'The Matrix', 'Warner Bros', 'Action', 1998, 'Lana Wachowski', 'Keanu Reeves', 'Real world ?', 6, 0),
-	(19, 'Star Wars I The Phantom menace', '20th Century Fox', 'SpaceOpera', 1999, 'George Lucas', 'Frank OZ', 'Begin long story ...', 1, 1),
-	(20, 'Star Wars Episode VI Return of the Jedi', '20th Century Fox', 'SpaceOpera', 1983, 'George Lucas', 'Harison Ford', 'Jedi return home ...', 2, 1),
-	(21, 'Star Wars Episode V The Empire Strikes Back', '20th Century Fox', 'SpaceOpera', 1980, 'George Lucas', 'Carrie Fisher', 'Empire Strikes again ...', 3, 0),
-	(22, 'Indiana Jones and the Last Crusade', '20th Century Fox', 'Adventure', 1989, 'George Lucas', 'Harison Ford', 'Indiana guy ...', 4, 1),
-	(23, 'Phineas and Ferb', 'Wallt Disney', 'Cartoon', 2007, 'George Lucas', 'Vinsent Martella', 'Duck with nose 007 ...', 5, 1),
-	(24, 'The Matrix', 'Warner Bros', 'Action', 1998, 'Lana Wachowski', 'Keanu Reeves', 'Real world ?', 6, 0),
-	(25, 'Star Wars I The Phantom menace', '20th Century Fox', 'SpaceOpera', 1999, 'George Lucas', 'Frank OZ', 'Begin long story ...', 1, 1),
-	(26, 'Star Wars Episode VI Return of the Jedi', '20th Century Fox', 'SpaceOpera', 1983, 'George Lucas', 'Harison Ford', 'Jedi return home ...', 2, 1),
-	(27, 'Star Wars Episode V The Empire Strikes Back', '20th Century Fox', 'SpaceOpera', 1980, 'George Lucas', 'Carrie Fisher', 'Empire Strikes again ...', 3, 0),
-	(28, 'Indiana Jones and the Last Crusade', '20th Century Fox', 'Adventure', 1989, 'George Lucas', 'Harison Ford', 'Indiana guy ...', 4, 1),
-	(29, 'Phineas and Ferb', 'Wallt Disney', 'Cartoon', 2007, 'George Lucas', 'Vinsent Martella', 'Duck with nose 007 ...', 5, 1),
-	(30, 'The Matrix', 'Warner Bros', 'Action', 1998, 'Lana Wachowski', 'Keanu Reeves', 'Real world ?', 6, 0);
+	(6, 'The Matrix', 'Warner Bros', 'Action', 1998, 'Lana Wachowski', 'Keanu Reeves', 'Real world ?', 6, 0);
 /*!40000 ALTER TABLE `movies` ENABLE KEYS */;
 
 -- Дамп структуры для таблица movie.resultt
@@ -110,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `resultt` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы movie.resultt: ~1 rows (приблизительно)
+-- Дамп данных таблицы movie.resultt: ~6 rows (приблизительно)
 /*!40000 ALTER TABLE `resultt` DISABLE KEYS */;
 INSERT INTO `resultt` (`ID`, `Res`, `MovieSer`) VALUES
 	(1, 7.9, 6695),
@@ -127,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `studioo` (
   PRIMARY KEY (`studios`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы movie.studioo: ~2 rows (приблизительно)
+-- Дамп данных таблицы movie.studioo: ~4 rows (приблизительно)
 /*!40000 ALTER TABLE `studioo` DISABLE KEYS */;
 INSERT INTO `studioo` (`studios`) VALUES
 	('20th Century Fox'),
